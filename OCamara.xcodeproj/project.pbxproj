@@ -13,6 +13,8 @@
 		40366ECA2558D59100337F5A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EC92558D59100337F5A /* Party.swift */; };
 		40366ECD2558D8B600337F5A /* PartyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ECC2558D8B600337F5A /* PartyAPI.swift */; };
 		40366ED02558E30500337F5A /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ECF2558E30500337F5A /* BaseAPI.swift */; };
+		40366ED5255912BA00337F5A /* DeputyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ED4255912BA00337F5A /* DeputyViewModel.swift */; };
+		40366EDA255912F300337F5A /* PartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ED9255912F300337F5A /* PartyViewModel.swift */; };
 		404C765C25567C6D00B59F35 /* OCamaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765B25567C6D00B59F35 /* OCamaraApp.swift */; };
 		404C765E25567C6D00B59F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765D25567C6D00B59F35 /* ContentView.swift */; };
 		404C766025567C6E00B59F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404C765F25567C6E00B59F35 /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		40366EC92558D59100337F5A /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		40366ECC2558D8B600337F5A /* PartyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyAPI.swift; sourceTree = "<group>"; };
 		40366ECF2558E30500337F5A /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		40366ED4255912BA00337F5A /* DeputyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputyViewModel.swift; sourceTree = "<group>"; };
+		40366ED9255912F300337F5A /* PartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewModel.swift; sourceTree = "<group>"; };
 		404C765825567C6D00B59F35 /* OCamara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCamara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		404C765B25567C6D00B59F35 /* OCamaraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCamaraApp.swift; sourceTree = "<group>"; };
 		404C765D25567C6D00B59F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,25 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		40366ED32559129900337F5A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				40366ED4255912BA00337F5A /* DeputyViewModel.swift */,
+				40366ED9255912F300337F5A /* PartyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		40366EDD25591ACD00337F5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				404C765D25567C6D00B59F35 /* ContentView.swift */,
+				40366EBE2558AD4E00337F5A /* DeputyRow.swift */,
+				40366EC22558CE1300337F5A /* PartyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		404C764F25567C6D00B59F35 = {
 			isa = PBXGroup;
 			children = (
@@ -77,9 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				404C765B25567C6D00B59F35 /* OCamaraApp.swift */,
-				404C765D25567C6D00B59F35 /* ContentView.swift */,
-				40366EBE2558AD4E00337F5A /* DeputyRow.swift */,
-				40366EC22558CE1300337F5A /* PartyView.swift */,
+				40366EDD25591ACD00337F5A /* View */,
+				40366ED32559129900337F5A /* ViewModel */,
 				40366EC52558D13600337F5A /* Infrastructure */,
 				404C76702556804200B59F35 /* API */,
 				404C766B25567C7E00B59F35 /* Model */,
@@ -188,6 +210,8 @@
 			files = (
 				40366EC72558D15D00337F5A /* ImageLoader.swift in Sources */,
 				404C766D25567D1D00B59F35 /* Deputy.swift in Sources */,
+				40366ED5255912BA00337F5A /* DeputyViewModel.swift in Sources */,
+				40366EDA255912F300337F5A /* PartyViewModel.swift in Sources */,
 				404C765E25567C6D00B59F35 /* ContentView.swift in Sources */,
 				40366EBF2558AD4E00337F5A /* DeputyRow.swift in Sources */,
 				40366ED02558E30500337F5A /* BaseAPI.swift in Sources */,

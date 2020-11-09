@@ -7,32 +7,18 @@
 
 import SwiftUI
 
-class PartyViewModel: ObservableObject {
-    var party: Party
-    
-    init(party: Party) {
-        self.party = party
-        ImageLoader.load(urlString: party.imageURL) { (image) in
-            DispatchQueue.main.async {
-                self.image = image
-            }
-        }
-    }
-    
-    @Published var image: Image?
-    
-    static var example: PartyViewModel {
-        return PartyViewModel(party: Party.example)
-    }
-}
-
 struct PartyView: View {
     
     @ObservedObject var viewModel: PartyViewModel
     
     var body: some View {
         VStack {
-            viewModel.image
+            if let image = viewModel.image {
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 40, height: 40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
             Text(viewModel.party.label)
         }
     }
