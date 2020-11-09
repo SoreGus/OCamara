@@ -7,20 +7,6 @@
 
 import SwiftUI
 
-class DeputyListViewModel: ObservableObject {
-    @Published var deputies: [Deputy] = []
-    
-    func fetch() {
-        DeputyAPI().fetch { (deputies) in
-            if let deputies = deputies {
-                DispatchQueue.main.async {
-                    self.deputies = deputies
-                }
-            }
-        }
-    }
-}
-
 struct ContentView: View {
     @ObservedObject var viewModel: DeputyListViewModel
     var body: some View {

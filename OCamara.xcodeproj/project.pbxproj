@@ -15,6 +15,7 @@
 		40366ED02558E30500337F5A /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ECF2558E30500337F5A /* BaseAPI.swift */; };
 		40366ED5255912BA00337F5A /* DeputyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ED4255912BA00337F5A /* DeputyViewModel.swift */; };
 		40366EDA255912F300337F5A /* PartyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ED9255912F300337F5A /* PartyViewModel.swift */; };
+		40366EE02559684500337F5A /* DeputyListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EDF2559684500337F5A /* DeputyListViewModel.swift */; };
 		404C765C25567C6D00B59F35 /* OCamaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765B25567C6D00B59F35 /* OCamaraApp.swift */; };
 		404C765E25567C6D00B59F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765D25567C6D00B59F35 /* ContentView.swift */; };
 		404C766025567C6E00B59F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404C765F25567C6E00B59F35 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		40366ECF2558E30500337F5A /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		40366ED4255912BA00337F5A /* DeputyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputyViewModel.swift; sourceTree = "<group>"; };
 		40366ED9255912F300337F5A /* PartyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewModel.swift; sourceTree = "<group>"; };
+		40366EDF2559684500337F5A /* DeputyListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputyListViewModel.swift; sourceTree = "<group>"; };
 		404C765825567C6D00B59F35 /* OCamara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCamara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		404C765B25567C6D00B59F35 /* OCamaraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCamaraApp.swift; sourceTree = "<group>"; };
 		404C765D25567C6D00B59F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		40366ED32559129900337F5A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				40366EDF2559684500337F5A /* DeputyListViewModel.swift */,
 				40366ED4255912BA00337F5A /* DeputyViewModel.swift */,
 				40366ED9255912F300337F5A /* PartyViewModel.swift */,
 			);
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40366EE02559684500337F5A /* DeputyListViewModel.swift in Sources */,
 				40366EC72558D15D00337F5A /* ImageLoader.swift in Sources */,
 				404C766D25567D1D00B59F35 /* Deputy.swift in Sources */,
 				40366ED5255912BA00337F5A /* DeputyViewModel.swift in Sources */,
