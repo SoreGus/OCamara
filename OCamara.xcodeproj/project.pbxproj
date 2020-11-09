@@ -12,6 +12,7 @@
 		40366EC72558D15D00337F5A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EC62558D15D00337F5A /* ImageLoader.swift */; };
 		40366ECA2558D59100337F5A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EC92558D59100337F5A /* Party.swift */; };
 		40366ECD2558D8B600337F5A /* PartyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ECC2558D8B600337F5A /* PartyAPI.swift */; };
+		40366ED02558E30500337F5A /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ECF2558E30500337F5A /* BaseAPI.swift */; };
 		404C765C25567C6D00B59F35 /* OCamaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765B25567C6D00B59F35 /* OCamaraApp.swift */; };
 		404C765E25567C6D00B59F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765D25567C6D00B59F35 /* ContentView.swift */; };
 		404C766025567C6E00B59F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404C765F25567C6E00B59F35 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		40366EC62558D15D00337F5A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		40366EC92558D59100337F5A /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		40366ECC2558D8B600337F5A /* PartyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyAPI.swift; sourceTree = "<group>"; };
+		40366ECF2558E30500337F5A /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		404C765825567C6D00B59F35 /* OCamara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCamara.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		404C765B25567C6D00B59F35 /* OCamaraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCamaraApp.swift; sourceTree = "<group>"; };
 		404C765D25567C6D00B59F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				404C76712556804C00B59F35 /* DeputyAPI.swift */,
 				40366ECC2558D8B600337F5A /* PartyAPI.swift */,
+				40366ECF2558E30500337F5A /* BaseAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				404C766D25567D1D00B59F35 /* Deputy.swift in Sources */,
 				404C765E25567C6D00B59F35 /* ContentView.swift in Sources */,
 				40366EBF2558AD4E00337F5A /* DeputyRow.swift in Sources */,
+				40366ED02558E30500337F5A /* BaseAPI.swift in Sources */,
 				40366EC32558CE1300337F5A /* PartyView.swift in Sources */,
 				404C765C25567C6D00B59F35 /* OCamaraApp.swift in Sources */,
 				40366ECA2558D59100337F5A /* Party.swift in Sources */,

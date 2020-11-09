@@ -9,29 +9,20 @@ import Foundation
 
 typealias DeputyAPICallback = ([Deputy]?) -> Void
 
-class DeputyAPI {
+class DeputyAPI: BaseAPI {
     func fetch(completion: @escaping DeputyAPICallback) {
-        let urlString: String = "https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome"
-        guard let url: URL = URL(string: urlString) else {
-            completion(nil)
-            return
-        }
-        let request: URLRequest = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if error != nil {
-                completion(nil)
-            } else {
-                if let data = data {
-                    do {
-                        let root: DeputyRoot = try JSONDecoder().decode(DeputyRoot.self, from: data)
-                        completion(root.deputies)
-                    } catch {
-                        completion(nil)
-                    }
-                } else {
+        request(urlString: "https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome") { (result) in
+            switch result {
+            case .success(let data):
+                do {
+                    let root: DeputyRoot = try JSONDecoder().decode(DeputyRoot.self, from: data)
+                    completion(root.deputies)
+                } catch {
                     completion(nil)
                 }
+            case .failure(_):
+                completion(nil)
             }
-        }.resume()
+        }
     }
 }
