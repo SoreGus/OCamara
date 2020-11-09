@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40366EBF2558AD4E00337F5A /* DeputyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EBE2558AD4E00337F5A /* DeputyRow.swift */; };
+		40366EC32558CE1300337F5A /* PartyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EC22558CE1300337F5A /* PartyView.swift */; };
+		40366EC72558D15D00337F5A /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EC62558D15D00337F5A /* ImageLoader.swift */; };
+		40366ECA2558D59100337F5A /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366EC92558D59100337F5A /* Party.swift */; };
+		40366ECD2558D8B600337F5A /* PartyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40366ECC2558D8B600337F5A /* PartyAPI.swift */; };
+		404C765C25567C6D00B59F35 /* OCamaraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765B25567C6D00B59F35 /* OCamaraApp.swift */; };
+		404C765E25567C6D00B59F35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C765D25567C6D00B59F35 /* ContentView.swift */; };
+		404C766025567C6E00B59F35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404C765F25567C6E00B59F35 /* Assets.xcassets */; };
+		404C766325567C6E00B59F35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404C766225567C6E00B59F35 /* Preview Assets.xcassets */; };
+		404C766D25567D1D00B59F35 /* Deputy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C766C25567D1D00B59F35 /* Deputy.swift */; };
+		404C76722556804C00B59F35 /* DeputyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404C76712556804C00B59F35 /* DeputyAPI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40366EBE2558AD4E00337F5A /* DeputyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputyRow.swift; sourceTree = "<group>"; };
+		40366EC22558CE1300337F5A /* PartyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyView.swift; sourceTree = "<group>"; };
+		40366EC62558D15D00337F5A /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		40366EC92558D59100337F5A /* Party.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		40366ECC2558D8B600337F5A /* PartyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyAPI.swift; sourceTree = "<group>"; };
+		404C765825567C6D00B59F35 /* OCamara.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCamara.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		404C765B25567C6D00B59F35 /* OCamaraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCamaraApp.swift; sourceTree = "<group>"; };
+		404C765D25567C6D00B59F35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		404C765F25567C6E00B59F35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		404C766225567C6E00B59F35 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		404C766425567C6E00B59F35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404C766C25567D1D00B59F35 /* Deputy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deputy.swift; sourceTree = "<group>"; };
+		404C76712556804C00B59F35 /* DeputyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeputyAPI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		404C765525567C6D00B59F35 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40366EC52558D13600337F5A /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				40366EC62558D15D00337F5A /* ImageLoader.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		404C764F25567C6D00B59F35 = {
+			isa = PBXGroup;
+			children = (
+				404C765A25567C6D00B59F35 /* OCamara */,
+				404C765925567C6D00B59F35 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		404C765925567C6D00B59F35 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				404C765825567C6D00B59F35 /* OCamara.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		404C765A25567C6D00B59F35 /* OCamara */ = {
+			isa = PBXGroup;
+			children = (
+				404C765B25567C6D00B59F35 /* OCamaraApp.swift */,
+				404C765D25567C6D00B59F35 /* ContentView.swift */,
+				40366EBE2558AD4E00337F5A /* DeputyRow.swift */,
+				40366EC22558CE1300337F5A /* PartyView.swift */,
+				40366EC52558D13600337F5A /* Infrastructure */,
+				404C76702556804200B59F35 /* API */,
+				404C766B25567C7E00B59F35 /* Model */,
+				404C765F25567C6E00B59F35 /* Assets.xcassets */,
+				404C766425567C6E00B59F35 /* Info.plist */,
+				404C766125567C6E00B59F35 /* Preview Content */,
+			);
+			path = OCamara;
+			sourceTree = "<group>";
+		};
+		404C766125567C6E00B59F35 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				404C766225567C6E00B59F35 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		404C766B25567C7E00B59F35 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				404C766C25567D1D00B59F35 /* Deputy.swift */,
+				40366EC92558D59100337F5A /* Party.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		404C76702556804200B59F35 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				404C76712556804C00B59F35 /* DeputyAPI.swift */,
+				40366ECC2558D8B600337F5A /* PartyAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		404C765725567C6D00B59F35 /* OCamara */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 404C766725567C6E00B59F35 /* Build configuration list for PBXNativeTarget "OCamara" */;
+			buildPhases = (
+				404C765425567C6D00B59F35 /* Sources */,
+				404C765525567C6D00B59F35 /* Frameworks */,
+				404C765625567C6D00B59F35 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCamara;
+			productName = OCamara;
+			productReference = 404C765825567C6D00B59F35 /* OCamara.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		404C765025567C6D00B59F35 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					404C765725567C6D00B59F35 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 404C765325567C6D00B59F35 /* Build configuration list for PBXProject "OCamara" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 404C764F25567C6D00B59F35;
+			productRefGroup = 404C765925567C6D00B59F35 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				404C765725567C6D00B59F35 /* OCamara */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		404C765625567C6D00B59F35 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404C766325567C6E00B59F35 /* Preview Assets.xcassets in Resources */,
+				404C766025567C6E00B59F35 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		404C765425567C6D00B59F35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40366EC72558D15D00337F5A /* ImageLoader.swift in Sources */,
+				404C766D25567D1D00B59F35 /* Deputy.swift in Sources */,
+				404C765E25567C6D00B59F35 /* ContentView.swift in Sources */,
+				40366EBF2558AD4E00337F5A /* DeputyRow.swift in Sources */,
+				40366EC32558CE1300337F5A /* PartyView.swift in Sources */,
+				404C765C25567C6D00B59F35 /* OCamaraApp.swift in Sources */,
+				40366ECA2558D59100337F5A /* Party.swift in Sources */,
+				40366ECD2558D8B600337F5A /* PartyAPI.swift in Sources */,
+				404C76722556804C00B59F35 /* DeputyAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		404C766525567C6E00B59F35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		404C766625567C6E00B59F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		404C766825567C6E00B59F35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OCamara/Preview Content\"";
+				DEVELOPMENT_TEAM = Z33726G6B5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OCamara/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sore.OCamara;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		404C766925567C6E00B59F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"OCamara/Preview Content\"";
+				DEVELOPMENT_TEAM = Z33726G6B5;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = OCamara/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Sore.OCamara;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		404C765325567C6D00B59F35 /* Build configuration list for PBXProject "OCamara" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404C766525567C6E00B59F35 /* Debug */,
+				404C766625567C6E00B59F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		404C766725567C6E00B59F35 /* Build configuration list for PBXNativeTarget "OCamara" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				404C766825567C6E00B59F35 /* Debug */,
+				404C766925567C6E00B59F35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 404C765025567C6D00B59F35 /* Project object */;
+}
