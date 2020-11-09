@@ -8,8 +8,13 @@
 import SwiftUI
 
 class PartyViewModel: ObservableObject {
+    
+    //MARK: - Properties
+    
     var party: Party
     @Published var image: Image?
+    
+    //MARK: - Initializers
     
     init(party: Party) {
         self.party = party
@@ -19,6 +24,8 @@ class PartyViewModel: ObservableObject {
             }
         }
     }
+    
+    //MARK: - Public Methods
     
     static var example: PartyViewModel {
         return PartyViewModel(party: Party.example)

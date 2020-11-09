@@ -10,6 +10,9 @@ import Foundation
 typealias DeputyAPICallback = ([Deputy]?) -> Void
 
 class DeputyAPI: BaseAPI {
+    
+    //MARK: - Public Methods
+    
     func fetch(completion: @escaping DeputyAPICallback) {
         request(urlString: "https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome") { (result) in
             switch result {

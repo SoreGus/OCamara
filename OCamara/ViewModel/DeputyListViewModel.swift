@@ -8,7 +8,12 @@
 import SwiftUI
 
 class DeputyListViewModel: ObservableObject {
+    
+    //MARK: - Properties
+    
     @Published var deputies: [Deputy] = []
+    
+    //MARK: - Public Methods
     
     func fetch() {
         DeputyAPI().fetch { (deputies) in

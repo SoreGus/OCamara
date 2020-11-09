@@ -22,6 +22,9 @@ enum BaseAPIError: Error {
 }
 
 class BaseAPI {
+    
+    //MARK: - Public Methods
+    
     func request(urlString: String, completion: @escaping BaseAPICallback) {
         guard let url: URL = URL(string: urlString) else {
             completion(.failure(.wrongURL))
