@@ -23,7 +23,6 @@ class ImageLoader {
                 completion(nil)
                 return
             }
-            print(url)
             URLSession.shared.dataTask(with: url) { (data, _, error) in
                 if
                     let data = data,
