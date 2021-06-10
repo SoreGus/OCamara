@@ -11,21 +11,15 @@ typealias DeputyAPICallback = ([Deputy]?) -> Void
 
 class DeputyAPI: BaseAPI {
     
+    // MARK: - Constants
+    
+    let kFetchDeputyURLString: String = "https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome"
+    
     //MARK: - Public Methods
     
-    func fetch(completion: @escaping DeputyAPICallback) {
-        request(urlString: "https://dadosabertos.camara.leg.br/api/v2/deputados?ordem=ASC&ordenarPor=nome") { (result) in
-            switch result {
-            case .success(let data):
-                do {
-                    let root: DeputyRoot = try JSONDecoder().decode(DeputyRoot.self, from: data)
-                    completion(root.deputies)
-                } catch {
-                    completion(nil)
-                }
-            case .failure(_):
-                completion(nil)
-            }
-        }
+    func fetch() async throws -> [Deputy] {
+        let result = try await request(urlString: kFetchDeputyURLString)
+        let root: DeputyRoot = try JSONDecoder().decode(DeputyRoot.self, from: result.data)
+        return root.deputies
     }
 }

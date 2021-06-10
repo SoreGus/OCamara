@@ -13,7 +13,9 @@ struct ContentView: View {
         List(viewModel.deputies, id: \.name) { deputy in
             DeputyRow(viewModel: DeputyViewModel(deputy: deputy))
         }.onAppear(perform: {
-            self.viewModel.fetch()
+            async {
+                await self.viewModel.fetch()
+            }
         })
     }
 }

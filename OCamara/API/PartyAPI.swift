@@ -15,22 +15,16 @@ class PartyAPI: BaseAPI {
     
     //MARK: - Public Methods
     
-    func fetch(uriString: String, completion: @escaping PartyAPIFetchCallback) {
-        if let partyData: Data = cachedImageData(uriString: uriString) {
-            completion(party(data: partyData))
+    func fetch(uriString: String) async throws -> Party {
+        if let partyData: Data = cachedImageData(uriString: uriString),
+            let party = party(data: partyData) {
+            return party
         } else {
-            request(urlString: uriString) { (result) in
-                switch result {
-                case .success(let data):
-                    if let party = self.party(data: data) {
-                        self.cacheImageData(uriString: uriString, data: data)
-                        completion(party)
-                    } else {
-                        completion(nil)
-                    }
-                case .failure(_):
-                    completion(nil)
-                }
+            let result = try await request(urlString: uriString)
+            if let party = party(data: result.data) {
+                return party
+            } else {
+                throw BaseAPIError.parse
             }
         }
     }

@@ -12,29 +12,27 @@ typealias ImageLoaderCompletion = (Image?) -> Void
 fileprivate let imageCache: NSCache = NSCache<NSString, UIImage>()
 fileprivate var imageCacheError: [String] = []
 
+enum ImageLoaderError: Error {
+    case cache
+    case wrongURL
+    case wrongImageFormat
+}
+
 class ImageLoader {
-    func load(urlString: String, completion: @escaping ImageLoaderCompletion) {
+    func load(urlString: String) async throws -> Image {
         if let uiImage = imageCache.object(forKey: urlString as NSString) {
-            completion(Image(uiImage: uiImage))
+            return Image(uiImage: uiImage)
         } else if imageCacheError.contains(urlString) {
-            completion(nil)
-        } else {
-            guard let url: URL = URL(string: urlString) else {
-                completion(nil)
-                return
-            }
-            URLSession.shared.dataTask(with: url) { (data, _, error) in
-                if
-                    let data = data,
-                    let uiImage: UIImage = UIImage(data: data)
-                {
-                    imageCache.setObject(uiImage, forKey: urlString as NSString)
-                    completion(Image(uiImage: uiImage))
-                } else {
-                    imageCacheError.append(urlString)
-                    completion(nil)
-                }
-            }.resume()
+            throw ImageLoaderError.cache
         }
+        guard let url: URL = URL(string: urlString) else {
+            throw ImageLoaderError.wrongURL
+        }
+        let (data, _) = try await URLSession.shared.data(from: url, delegate: nil)
+        if let image = UIImage(data: data) {
+            imageCache.setObject(image, forKey: urlString as NSString)
+            return Image(uiImage: image)
+        }
+        throw ImageLoaderError.wrongImageFormat
     }
 }

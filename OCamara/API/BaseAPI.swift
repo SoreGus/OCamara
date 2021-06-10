@@ -7,40 +7,36 @@
 
 import Foundation
 
-typealias BaseAPICallback = (BaseAPIResult<Data>) -> Void
-
-enum BaseAPIResult<T> {
-    case success(T)
-    case failure(BaseAPIError)
-}
-
 enum BaseAPIError: Error {
     case wrongURL
     case request(Error)
-    case parse(Error)
+    case parse
     case noData
+}
+
+struct APIResult {
+    var data: Data
+    var response: URLResponse
 }
 
 class BaseAPI {
     
     //MARK: - Public Methods
     
-    func request(urlString: String, completion: @escaping BaseAPICallback) {
-        guard let url: URL = URL(string: urlString) else {
-            completion(.failure(.wrongURL))
-            return
-        }
-        let request: URLRequest = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                completion(.failure(.request(error)))
-            } else {
-                if let data = data {
-                    completion(.success(data))
-                } else {
-                    completion(.failure(.noData))
-                }
-            }
-        }.resume()
+    func request(urlString: String) async throws -> APIResult {
+        guard let url: URL = URL(
+            string: urlString
+        ) else { throw BaseAPIError.wrongURL }
+        let request: URLRequest = URLRequest(
+            url: url
+        )
+        let (data, response) = try await URLSession.shared.data(
+            for: request,
+               delegate: nil
+        )
+        return APIResult(
+            data: data,
+            response: response
+        )
     }
 }

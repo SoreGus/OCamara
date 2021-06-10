@@ -20,11 +20,10 @@ class DeputyViewModel: ObservableObject {
     init(deputy: Deputy) {
         self.deputy = deputy
         loadImage()
-        PartyAPI().fetch(uriString: deputy.partyUri) { (party) in
-            if let party = party {
-                DispatchQueue.main.async {
-                    self.party = party
-                }
+        async {
+            let aParty = try await PartyAPI().fetch(uriString: deputy.partyUri)
+            DispatchQueue.main.async {
+                self.party = aParty
             }
         }
     }
@@ -38,11 +37,14 @@ class DeputyViewModel: ObservableObject {
     //MARK: - Private Methods
     
     private func loadImage() {
-        ImageLoader().load(urlString: deputy.photoURL) { (image) in
-            if let image = image {
+        async {
+            do {
+                let aImage = try await ImageLoader().load(urlString: deputy.photoURL)
                 DispatchQueue.main.async {
-                    self.image = image
+                    self.image = aImage
                 }
+            } catch {
+                // error
             }
         }
     }

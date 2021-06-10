@@ -15,13 +15,11 @@ class DeputyListViewModel: ObservableObject {
     
     //MARK: - Public Methods
     
-    func fetch() {
-        DeputyAPI().fetch { (deputies) in
-            if let deputies = deputies {
-                DispatchQueue.main.async {
-                    self.deputies = deputies
-                }
-            }
+    func fetch() async {
+        do {
+            deputies = try await DeputyAPI().fetch()
+        } catch {
+            // error
         }
     }
 }

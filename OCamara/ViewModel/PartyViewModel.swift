@@ -18,9 +18,14 @@ class PartyViewModel: ObservableObject {
     
     init(party: Party) {
         self.party = party
-        ImageLoader().load(urlString: party.imageURL) { (image) in
-            DispatchQueue.main.async {
-                self.image = image
+        async {
+            do {
+                let aImate = try await ImageLoader().load(urlString: party.imageURL)
+                DispatchQueue.main.async {
+                    self.image = aImate
+                }
+            } catch {
+                // error
             }
         }
     }
